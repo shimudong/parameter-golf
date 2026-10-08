@@ -1,0 +1,17 @@
+{
+  "samples": 16,
+  "unique_images": 12,
+  "soft_accuracy": 0.74375,
+  "stderr_question_level": 0.11104381642697024,
+  "score_distribution": {
+    "0.9": 1,
+    "1.0": 11,
+    "0.0": 4
+  },
+  "all_logged_scores_verified": true,
+  "gold_sha256": "e846f4948354769f0cba7104113f80521276293473cbc1a083408db8a3dfd398",
+  "predictions_sha256": {
+    "audit/evidence/smoke/samples.jsonl": "4ba1cc1b795182c653afca40cdb22bc3207429bacd5e43893ca36dbe61a3cdea"
+  },
+  "rescored_samples_sha256": "ef282cc2aff344f05ad9c889f68f9516f34bdef5dd03f96c6712409315dc510c"
+}

@@ -1,0 +1,17 @@
+/public/home/shiyd2023/miniconda3/envs/llm/lib/python3.13/site-packages/transformers/models/auto/modeling_auto.py:2284: FutureWarning: The class `AutoModelForVision2Seq` is deprecated and will be removed in v5.0. Please use `AutoModelForImageTextToText` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+trainable params: 18,219,008 || all params: 2,145,751,040 || trainable%: 0.8491
+[INFO] Loaded 34602 prepared TextVQA samples from /public/home/shiyd2023/shiyd/parameter-golf/data/prepared_textvqa_qwen3vl_seed1
+[INFO] Attached EMACallback with decay=0.99, start_step=800
+Detected kernel version 3.10.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO] LoRA+ optimizer created with ratio=4.0, base_lr=5e-05
+  Group 0: lr=5e-05, weight_decay=0.0, num_params=208
+  Group 1: lr=1e-06, weight_decay=0.0, num_params=0
+  Group 2: lr=0.0002, weight_decay=0.0, num_params=208
+  Group 3: lr=0.0002, weight_decay=0.0, num_params=0
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:07<00:07,  7.07s/it]                                             {'loss': 0.9009, 'grad_norm': nan, 'learning_rate': 0.0, 'epoch': 0.0}
+ 50%|█████     | 1/2 [00:07<00:07,  7.07s/it]100%|██████████| 2/2 [00:11<00:00,  5.57s/it]                                             {'loss': 0.6652, 'grad_norm': 4.308952808380127, 'learning_rate': 0.0, 'epoch': 0.0}
+100%|██████████| 2/2 [00:11<00:00,  5.57s/it]                                             {'train_runtime': 11.5978, 'train_samples_per_second': 1.38, 'train_steps_per_second': 0.172, 'train_loss': 0.7830533087253571, 'epoch': 0.0}
+100%|██████████| 2/2 [00:11<00:00,  5.57s/it]100%|██████████| 2/2 [00:11<00:00,  5.80s/it]
+[INFO] Successfully saved adapter model to /public/home/shiyd2023/shiyd/opd/layer-opd/parameter-golf-audit/layeropd_pg_smoke_c926b2c_20261008b/smoke_train/final

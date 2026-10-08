@@ -7,9 +7,10 @@ import statistics
 import sys
 
 root = pathlib.Path(sys.argv[1])
+arms = sys.argv[2:] or ['champion', 'base']
 summary = {}
 all_samples = {}
-for arm in ('champion', 'base'):
+for arm in arms:
     samples = []
     files = sorted((root / arm).glob('shard*/results/**/*.jsonl'))
     assert files, f'No sample files for {arm}'
@@ -30,13 +31,14 @@ for arm in ('champion', 'base'):
                     'peak_reserved_bytes': max(m['peak_reserved_bytes'] for m in measurements),
                     'sample_files_sha256': {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     all_samples[arm] = samples
-for champion, base in zip(all_samples['champion'], all_samples['base']):
-    assert champion['doc']['question_id'] == base['doc']['question_id']
-deltas = [a['exact_match'] - b['exact_match'] for a,b in zip(all_samples['champion'], all_samples['base'])]
-summary['paired_delta'] = statistics.mean(deltas)
-summary['paired_delta_stderr_question_level'] = statistics.stdev(deltas)/math.sqrt(len(deltas))
-if summary['base']['generation_seconds'] > 0:
-    summary['generation_latency_ratio'] = summary['champion']['generation_seconds']/summary['base']['generation_seconds']
+if 'champion' in all_samples and 'base' in all_samples:
+    for champion, base in zip(all_samples['champion'], all_samples['base']):
+        assert champion['submission']['question_id'] == base['submission']['question_id']
+    deltas = [a['exact_match'] - b['exact_match'] for a,b in zip(all_samples['champion'], all_samples['base'])]
+    summary['paired_delta'] = statistics.mean(deltas)
+    summary['paired_delta_stderr_question_level'] = statistics.stdev(deltas)/math.sqrt(len(deltas))
+    if summary['base']['generation_seconds'] > 0:
+        summary['generation_latency_ratio'] = summary['champion']['generation_seconds']/summary['base']['generation_seconds']
 summary['metric_note'] = 'Standard TextVQA soft accuracy, not binary exact-match accuracy.'
 (root / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
 print(json.dumps(summary, indent=2))

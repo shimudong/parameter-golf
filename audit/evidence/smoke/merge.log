@@ -1,0 +1,4 @@
+/public/home/shiyd2023/miniconda3/envs/llm/lib/python3.13/site-packages/transformers/models/auto/modeling_auto.py:2284: FutureWarning: The class `AutoModelForVision2Seq` is deprecated and will be removed in v5.0. Please use `AutoModelForImageTextToText` instead.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO] Merged model saved to /public/home/shiyd2023/shiyd/opd/layer-opd/parameter-golf-audit/layeropd_pg_smoke_c926b2c_20261008b/merged

@@ -1,0 +1,13 @@
+{
+  "script": "/storage/data/shiyd2023/opd/layer-opd/parameter-golf-audit/packages/eb1c90b/train_textvqa_qwen3vl.py",
+  "argv": [
+    "--config",
+    "/public/home/shiyd2023/shiyd/opd/layer-opd/parameter-golf-audit/layeropd_pg_smoke_c926b2c_20261008b/smoke_train.yaml"
+  ],
+  "status": "success",
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "total_memory_bytes": 11539054592,
+  "wall_seconds": 42.79296700656414,
+  "peak_allocated_bytes": 6313385472,
+  "peak_reserved_bytes": 7612661760
+}

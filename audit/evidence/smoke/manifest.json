@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.57.0",
+    "peft": "0.15.2",
+    "accelerate": "1.7.0",
+    "datasets": "3.6.0",
+    "qwen-vl-utils": "0.0.14",
+    "lmms_eval": "0.7.1"
+  },
+  "base_model": "/storage/data/shiyd2023/LLM_model/Qwen/Qwen3-VL-2B-Instruct",
+  "data": "/storage/data/shiyd2023/datasets/textvqa/default/train/*.parquet",
+  "adapter_sha256": "a22e51ed25752b6964c1a63a434bbca2337ae3e31d5d3f727dd4256c0427efe4",
+  "eval_change": "Only dataset_path changed; original BF16 model wrapper preserved.",
+  "smoke_change": "Paths, max_steps=2 and logging_steps=1 only. Reuses existing prepared data for functional smoke, not formal retraining."
+}
