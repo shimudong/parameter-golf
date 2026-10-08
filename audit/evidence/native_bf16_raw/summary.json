@@ -1,0 +1,32 @@
+{
+  "champion": {
+    "n": 5000,
+    "soft_accuracy": 0.73606,
+    "stderr": 0.005892035174343339,
+    "generation_seconds": 1473.3951774016023,
+    "generation_seconds_per_sample": 0.29467903548032043,
+    "peak_allocated_bytes": 4390131200,
+    "peak_reserved_bytes": 4603248640,
+    "sample_files_sha256": {
+      "champion/shard0/results/layeropd_pg_smoke_c926b2c_20261008b__merged/20261008_133434_samples_textvqa_val.jsonl": "4af6c6c38962b55c1585696040aac5438679c0b0eafea1f43d55c23fb2b8ac25",
+      "champion/shard1/results/layeropd_pg_smoke_c926b2c_20261008b__merged/20261008_134944_samples_textvqa_val.jsonl": "e9fac156bd2bee85319250560fffdfab132e52fb82d580cf4c91b665b520fd97"
+    }
+  },
+  "base": {
+    "n": 5000,
+    "soft_accuracy": 0.699,
+    "stderr": 0.006149224552130008,
+    "generation_seconds": 1552.8251485526562,
+    "generation_seconds_per_sample": 0.31056502971053124,
+    "peak_allocated_bytes": 4390098432,
+    "peak_reserved_bytes": 4603248640,
+    "sample_files_sha256": {
+      "base/shard0/results/Qwen__Qwen3-VL-2B-Instruct/20261008_134927_samples_textvqa_val.jsonl": "d59758e884faf8ed6e4d1fd5395f44491ba36d459dea1bab8e90b0cc55b72b94",
+      "base/shard1/results/Qwen__Qwen3-VL-2B-Instruct/20261008_133434_samples_textvqa_val.jsonl": "f5d43f3dfa49b3caf3ae9f483c3ac06fce104aa86b1abfe08eec2f309a066627"
+    }
+  },
+  "paired_delta": 0.03706,
+  "paired_delta_stderr_question_level": 0.004751149962397844,
+  "generation_latency_ratio": 0.948848090704167,
+  "metric_note": "Standard TextVQA soft accuracy, not binary exact-match accuracy."
+}

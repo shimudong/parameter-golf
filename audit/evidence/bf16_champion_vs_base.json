@@ -1,0 +1,13 @@
+{
+  "left": "audit/evidence/bf16_champion.jsonl.gz",
+  "right": "audit/evidence/bf16_base.jsonl.gz",
+  "n_questions": 5000,
+  "n_images": 3166,
+  "paired_delta": 0.03706,
+  "image_cluster_bootstrap_95_ci": [
+    0.02767092038190153,
+    0.046522227481944546
+  ],
+  "bootstrap_repetitions": 20000,
+  "bootstrap_seed": 1234
+}

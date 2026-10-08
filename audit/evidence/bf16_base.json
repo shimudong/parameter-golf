@@ -1,0 +1,20 @@
+{
+  "samples": 5000,
+  "unique_images": 3166,
+  "soft_accuracy": 0.699,
+  "stderr_question_level": 0.006149224552130008,
+  "score_distribution": {
+    "0.9": 227,
+    "1.0": 3123,
+    "0.3": 215,
+    "0.0": 1263,
+    "0.6": 172
+  },
+  "all_logged_scores_verified": true,
+  "gold_sha256": "e846f4948354769f0cba7104113f80521276293473cbc1a083408db8a3dfd398",
+  "predictions_sha256": {
+    "audit/evidence/native_bf16_raw/base/shard0/results/Qwen__Qwen3-VL-2B-Instruct/20261008_134927_samples_textvqa_val.jsonl": "d59758e884faf8ed6e4d1fd5395f44491ba36d459dea1bab8e90b0cc55b72b94",
+    "audit/evidence/native_bf16_raw/base/shard1/results/Qwen__Qwen3-VL-2B-Instruct/20261008_133434_samples_textvqa_val.jsonl": "f5d43f3dfa49b3caf3ae9f483c3ac06fce104aa86b1abfe08eec2f309a066627"
+  },
+  "rescored_samples_sha256": "0e01655eb02abab9fe70809d7c9ce8f57a6168edab14c63965708d5d76e0781f"
+}

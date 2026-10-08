@@ -1,0 +1,20 @@
+{
+  "samples": 5000,
+  "unique_images": 3166,
+  "soft_accuracy": 0.73606,
+  "stderr_question_level": 0.005892035174343339,
+  "score_distribution": {
+    "0.9": 225,
+    "1.0": 3317,
+    "0.0": 1084,
+    "0.3": 212,
+    "0.6": 162
+  },
+  "all_logged_scores_verified": true,
+  "gold_sha256": "e846f4948354769f0cba7104113f80521276293473cbc1a083408db8a3dfd398",
+  "predictions_sha256": {
+    "audit/evidence/native_bf16_raw/champion/shard0/results/layeropd_pg_smoke_c926b2c_20261008b__merged/20261008_133434_samples_textvqa_val.jsonl": "4af6c6c38962b55c1585696040aac5438679c0b0eafea1f43d55c23fb2b8ac25",
+    "audit/evidence/native_bf16_raw/champion/shard1/results/layeropd_pg_smoke_c926b2c_20261008b__merged/20261008_134944_samples_textvqa_val.jsonl": "e9fac156bd2bee85319250560fffdfab132e52fb82d580cf4c91b665b520fd97"
+  },
+  "rescored_samples_sha256": "5c45daa9ab71edb011c238ebf8193e2137d7fd32d2f8fedfc8f909bbed99269c"
+}
