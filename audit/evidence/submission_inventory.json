@@ -1,0 +1,71 @@
+{
+  "target_commit": "c926b2c397e3af4af06e4cf1738b5f991439da59",
+  "adapter_sha256": "a22e51ed25752b6964c1a63a434bbca2337ae3e31d5d3f727dd4256c0427efe4",
+  "adapter_bytes": 72937256,
+  "adapter_mib": 69.55838775634766,
+  "tensors": 416,
+  "all_values_finite": true,
+  "parameters": 18219008,
+  "vision_tensors": 24,
+  "language_tensors": 392,
+  "submitted_results": [
+    {
+      "file": "results/textvqa/seed1_champ_results.json",
+      "score": 0.7379000000000034,
+      "sample_count": {
+        "original": 5000,
+        "effective": 5000
+      },
+      "throughput": {
+        "total_gen_tokens": 18648,
+        "total_elapsed_time": 1392.661458492279,
+        "avg_speed": 13.390188897873765,
+        "avg_rank": 0.0
+      },
+      "log_samples": false
+    },
+    {
+      "file": "results/textvqa/seed2_champ_results.json",
+      "score": 0.7295800000000034,
+      "sample_count": {
+        "original": 5000,
+        "effective": 5000
+      },
+      "throughput": {
+        "total_gen_tokens": 18702,
+        "total_elapsed_time": 1368.1680994033813,
+        "avg_speed": 13.669372943394459,
+        "avg_rank": 0.0
+      },
+      "log_samples": false
+    },
+    {
+      "file": "results/textvqa/seed3_champ_results.json",
+      "score": 0.7363400000000045,
+      "sample_count": {
+        "original": 5000,
+        "effective": 5000
+      },
+      "throughput": {
+        "total_gen_tokens": 18911,
+        "total_elapsed_time": 1407.736677646637,
+        "avg_speed": 13.433620292975661,
+        "avg_rank": 0.0
+      },
+      "log_samples": false
+    }
+  ],
+  "submitted_mean": 0.7346066666666705,
+  "submitted_sample_sd": 0.0044225482850202115,
+  "provenance": {
+    "adapters": [
+      "/storage/yiguang/parameter-golf-outputs/exp07_vit_3blocks_seed1/final",
+      "/storage/yiguang/parameter-golf-outputs/exp08_ema_seed1/final_ema"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "num_tensors": 416
+  }
+}
