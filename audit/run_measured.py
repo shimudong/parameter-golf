@@ -44,6 +44,14 @@ try:
     else:
         runpy.run_module(args.module, run_name='__main__', alter_sys=True)
     record['status'] = 'success'
+except SystemExit as exc:
+    record['exit_code'] = exc.code
+    if exc.code in (None, 0):
+        record['status'] = 'success'
+    else:
+        record['status'] = 'failed'
+        record['traceback'] = traceback.format_exc()
+        raise
 except BaseException:
     record['status'] = 'failed'
     record['traceback'] = traceback.format_exc()

@@ -1,0 +1,15 @@
+{
+  "tensor_keys_and_shapes_identical": true,
+  "tensors": 625,
+  "no_remaining_lora_tensors": true,
+  "base_dtype": [
+    "BF16"
+  ],
+  "merged_dtype": [
+    "F16"
+  ],
+  "architectures": [
+    "Qwen3VLForConditionalGeneration"
+  ],
+  "flops_scope": "Same dense architecture supports equal FLOPs at identical input/output lengths; generated response lengths can differ. No end-to-end FLOP measurement claimed."
+}

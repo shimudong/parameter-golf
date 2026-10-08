@@ -22,7 +22,12 @@ for arm in arms:
     scores = [row['exact_match'] for row in samples]
     reports = [json.loads(p.read_text()) for p in sorted((root / arm).glob('shard*/results/**/*_results.json'))]
     measurements = [json.loads(p.read_text()) for p in sorted((root / arm).glob('shard*/measurement.json'))]
-    assert len(reports) == len(measurements) >= 2 and all(m['status'] == 'success' for m in measurements)
+    # Older audit wrapper recorded the CLI's intentional sys.exit(0) as failed.
+    # Preserve those originals and classify only this exact successful-exit case.
+    def completed(m):
+        return m['status'] == 'success' or (m.get('module') == 'lmms_eval' and m.get('traceback', '').endswith('SystemExit: 0\n'))
+    assert len(reports) == len(measurements) >= 2 and all(completed(m) for m in measurements)
+    assert sum(m['generation_count'] for m in measurements) == 5000
     seconds = sum(m['generation_seconds'] for m in measurements)
     summary[arm] = {'n': len(scores), 'soft_accuracy': statistics.mean(scores),
                     'stderr': statistics.stdev(scores)/math.sqrt(len(scores)),
