@@ -44,6 +44,8 @@ rescored = []
 for row in samples:
     qid = row['submission']['question_id']
     reference = gold[qid]
+    assert gold_rows[row['doc_id']]['question_id'] == qid
+    assert row['input'] == reference['question'].capitalize() + '\nAnswer the question using a single word or phrase.'
     response = row['filtered_resps']
     if isinstance(response, list):
         assert len(response) == 1

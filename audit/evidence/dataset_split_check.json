@@ -1,0 +1,14 @@
+{
+  "train": {
+    "question_id": 34602,
+    "image_id": 21953
+  },
+  "validation": {
+    "question_id": 5000,
+    "image_id": 3166
+  },
+  "overlap": {
+    "question_id": 0,
+    "image_id": 0
+  }
+}

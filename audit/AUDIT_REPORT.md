@@ -17,6 +17,8 @@
 - 提交权重的 soup manifest 引用两个不同输出目录：`exp07_vit_3blocks_seed1/final` 与 `exp08_ema_seed1/final_ema`。所附 training config 没有 EMA 字段，而当前默认训练入口在同一运行中生成 raw、EMA 和二者的平均。因此旧权重的实际来源与新的一键复现流程之间还缺少原始训练记录和输入权重哈希。
 - 软件环境说明不一致：`requirements.txt` 为 Transformers 4.57.0 / PEFT 0.15.2 / Accelerate 1.7.0；补充材料为 4.49.0 / 0.14.0 / 1.4.0；本次使用与 requirements 一致的已有环境。
 - 模型结构文档存在错误：实测底座 config 的视觉 patch size 为 16，语言 KV heads 为 8；报告写为 14 和 2。
+- 本次使用的数据划分完整：训练集 34,602 题 / 21,953 张图；验证集 5,000 题 / 3,166 张图；两个集合的问题 ID 和图像 ID 均无重叠。
+- 合并产物结构检查通过：625 个权重张量名称和形状与底座一致，没有剩余 LoRA 分支。等长输入/输出下的模型结构 FLOPs 相同；未把该结构检查表述为变长生成的端到端 FLOPs 实测。
 
 ## 复现安排与限制
 
